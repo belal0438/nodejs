@@ -18,7 +18,7 @@ const requestHandler = (req, res) => {
             res.write(`<body>${data}</body>`);
             res.write('<body><form action = "/message"  method ="POST"><input type = "text" name ="message"><button>sbmit</button></form></body>');
             res.write('</html>');
-            return res.end();
+          return  res.end();
 
         })
     } else if (req.url == '/message' && req.method == "POST") {
@@ -35,7 +35,7 @@ const requestHandler = (req, res) => {
             const ParseBody = Buffer.concat(body).toString();
             // console.log("ParseBody  " + ParseBody);
 
-            const message = ParseBody.split('=')[1];
+            const message = ParseBody.split('=')[0];
 
             // console.log(" message  " + message);
 
@@ -54,6 +54,7 @@ const requestHandler = (req, res) => {
         res.write('</html>');
         res.end();
     }
+
 
 }
 // exports = requestHandler;

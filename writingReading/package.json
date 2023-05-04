@@ -1,0 +1,16 @@
+{
+  "name": "writingreading",
+  "version": "1.0.0",
+  "description": "installing node packge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "start-server": "nodemon node index.js"
+  },
+  "author": "Mohd belal",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
